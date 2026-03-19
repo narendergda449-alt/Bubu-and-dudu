@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love You - Bubu & Dudu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'bounce-slow': 'bounce 2s infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                        'heart-explode': 'heartExplode 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+                        'bubu-hop': 'bubuHop 1.5s infinite',
+                        'dudu-wiggle': 'duduWiggle 2s infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        heartExplode: {
+                            '0%': { transform: 'scale(0) rotate(0deg)', opacity: 1 },
+                            '50%': { transform: 'scale(1.2) rotate(180deg)', opacity: 1 },
+                            '100%': { transform: 'scale(0) rotate(360deg)', opacity: 0 },
+                        },
+                        bubuHop: {
+                            '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+                            '50%': { transform: 'translateY(-15px) rotate(5deg)' },
+                        },
+                        duduWiggle: {
+                            '0%, 100%': { transform: 'rotate(0deg)' },
+                            '25%': { transform: 'rotate(3deg)' },
+                            '75%': { transform: 'rotate(-3deg)' },
+                        },
+                    },
+                }
+            }
+        }
+   
